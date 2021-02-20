@@ -1,0 +1,11 @@
+---
+# vars file for install_tool
+
+ins_action: absent
+
+package_list:
+  - iotop
+  - traceroute
+
+
+

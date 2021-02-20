@@ -1,0 +1,23 @@
+---
+# tasks file for check_uptime
+
+- name: Capture timestamp
+  shell: date +"%Y%m%d%H%M%S"
+  register: current_date_time
+
+- name: Check Uptime
+  shell: "uptime"
+  register: uptime
+
+- name: Output Uptime
+  debug: msg={{ uptime.stdout_lines }}
+
+- name: Create dump directory
+  file: path={{ dump_dir }} state=directory mode=0755
+
+- name: Deploy template output
+  template: src=uptime.txt.j2 dest={{ dump_dir }}/uptime-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt
+
+- name: Fetch the output file
+  fetch: src={{ dump_dir }}/uptime-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt dest={{ dump_dir }}/uptime-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt flat=yes
+

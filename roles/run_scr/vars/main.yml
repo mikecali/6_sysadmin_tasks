@@ -1,0 +1,6 @@
+---
+# vars file for run_scr
+
+my_scr: /home/tejalj/myscript.sh
+dump_dir: /var/tmp
+

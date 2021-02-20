@@ -1,0 +1,37 @@
+---
+# tasks file for install_cron
+
+  - name: Capture timestamp
+    shell: date +"%Y%m%d%H%M%S"
+    register: current_date_time
+
+  - name: Check the crontab for root (Before)
+    shell: crontab -l
+    register: crontab_out_before
+
+  - name: Logs Output
+    debug: msg={{ crontab_out_before.stdout_lines }}
+
+  - name: Save the crontab output for root before the change
+    template: src=cron_output_before.txt.j2 dest={{ dump_dir }}/cron-before-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt
+
+  - name: Fetch the output file
+    fetch: src={{ dump_dir }}/cron-before-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt dest={{ dump_dir }}/cron-before-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt flat=yes
+
+
+  - name: Install a new cron job entry
+    cron: name={{ cron_name }} minute={{ cron_min }}  hour={{ cron_hour }} job={{ cron_job }} state={{ cron_stat }} backup=yes
+
+  - name: Check the crontab for root (After)
+    shell: crontab -l
+    register: crontab_out_after
+
+  - name: Logs Output
+    debug: msg={{ crontab_out_after.stdout_lines }}
+
+  - name: Save the crontab output for root after the change
+    template: src=cron_output_after.txt.j2 dest={{ dump_dir }}/cron-after-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt
+
+  - name: Fetch the output file
+    fetch: src={{ dump_dir }}/cron-after-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt dest={{ dump_dir }}/cron-after-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt flat=yes
+

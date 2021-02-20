@@ -1,0 +1,23 @@
+---
+# tasks file for run_scr
+
+- name: Capture timestamp
+  shell: date +"%Y%m%d%H%M%S"
+  register: current_date_time
+
+- name: Run a specified script
+  script: "{{ my_scr }}"
+  register: my_scr_out
+
+- name: Logs Output
+  debug: msg={{ my_scr_out.stdout_lines }}
+
+- name: Create dump directory
+  file: path={{ dump_dir }} state=directory mode=0755
+
+- name: Deploy template output
+  template: src=scr_output.txt.j2 dest={{ dump_dir }}/script-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt
+  
+- name: Fetch the output file
+  fetch: src={{ dump_dir }}/script-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt dest={{ dump_dir }}/script-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt flat=yes
+

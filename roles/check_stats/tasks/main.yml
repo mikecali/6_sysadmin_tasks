@@ -1,0 +1,20 @@
+---
+# tasks file for check_stats
+
+- name: Get current date time
+  shell: date +"%Y%m%d%H%M%S"
+  register: current_date_time
+
+- name: gather sar information
+  command: "{{ command }}"
+  register: sar_all
+
+- name: Create dump directory
+  file: path={{ dump_dir }} state=directory mode=0755
+
+- name: Template file
+  template: src=sar_output.txt.j2 dest={{ dump_dir }}/sar-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt
+
+- name: Fetch the output file
+  fetch: src={{ dump_dir }}/sar-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt dest={{ dump_dir }}/sar-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt flat=yes
+

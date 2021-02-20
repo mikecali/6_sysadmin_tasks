@@ -1,0 +1,26 @@
+---
+# tasks file for check_logs
+
+- name: Capture Timestamp
+  shell: date +"%Y%m%d%H%M%S"
+  register: current_date_time
+
+- name: Check the logs
+  shell: grep "`date --date="today" +%b\ %e`" {{ log_file }}
+  sudo: yes
+  sudo_user: root
+  register: log_messages
+  ignore_errors: true
+
+- name: Logs Output
+  debug: msg={{ log_messages.stdout_lines }}
+
+- name: Create dump directory
+  file: path={{ dump_dir }} state=directory mode=0755
+
+- name: Deploy Template Output
+  template: src=logs_output.txt.j2 dest={{ dump_dir }}/logs-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt
+
+- name: Fetch the output file
+  fetch: src={{ dump_dir }}/logs-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt dest={{ dump_dir }}/logs-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt flat=yes
+

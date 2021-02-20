@@ -1,0 +1,6 @@
+- name: Run Script to Servers
+  hosts: all
+  gather_facts: True
+  sudo: yes
+  roles:
+    - run_scr

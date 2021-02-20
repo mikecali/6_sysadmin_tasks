@@ -1,0 +1,7 @@
+---
+# vars file for check_logs
+# Defaults
+
+log_file: /var/log/messages
+dump_dir: /var/tmp/JMT_logs
+

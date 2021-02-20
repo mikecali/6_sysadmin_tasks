@@ -1,0 +1,10 @@
+---
+- name: Install additional cron jobs for root
+  hosts: all
+  gather_facts: True
+  remote_user: tejalj
+  become_user: root
+  become: yes
+  roles:
+   - install_cron
+

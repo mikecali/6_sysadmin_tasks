@@ -1,0 +1,8 @@
+---
+# tasks file for install_tool
+
+- name: Install specified tools in the role vars
+  yum: 
+    name={{ item.pkg }}
+    state={{ item.act }}
+  with_items: "{{ package_list }}" 

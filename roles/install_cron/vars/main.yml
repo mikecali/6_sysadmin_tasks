@@ -1,0 +1,10 @@
+---
+# vars file for install_cron
+
+cron_name: "Iotop Monitoring"
+cron_min: 0 
+cron_hour: "5,2"
+cron_job: "/usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+dump_dir: /var/tmp
+cron_stat: present
+backup_file: /var/tmp/cron-backup-{{ inventory_hostname }}-{{ current_date_time.stdout }}.txt

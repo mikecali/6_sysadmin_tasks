@@ -1,0 +1,4 @@
+---
+# vars file for check_uptime
+
+dump_dir: /var/tmp
