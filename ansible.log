@@ -1,0 +1,685 @@
+2021-02-21 18:03:45,751 p=9034 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-02-21 18:03:46,119 p=9034 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:03:46,138 p=9034 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:03:46,422 p=9034 u=root n=ansible | changed: [localhost]
+2021-02-21 18:03:46,429 p=9034 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:03:46,581 p=9034 u=root n=ansible | changed: [localhost]
+2021-02-21 18:03:46,588 p=9034 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:03:46,667 p=9034 u=root n=ansible | ok: [localhost] => {
+    "msg": [
+        " 18:03:46 up 40 min,  1 user,  load average: 0.81, 1.25, 1.41"
+    ]
+}
+2021-02-21 18:03:46,698 p=9034 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:03:46,972 p=9034 u=root n=ansible | changed: [localhost]
+2021-02-21 18:03:46,980 p=9034 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:03:47,510 p=9034 u=root n=ansible | changed: [localhost]
+2021-02-21 18:03:47,520 p=9034 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:03:47,734 p=9034 u=root n=ansible | ok: [localhost]
+2021-02-21 18:03:47,736 p=9034 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:03:47,736 p=9034 u=root n=ansible | localhost                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:04:25,574 p=9210 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-02-21 18:04:25,767 p=9210 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:04:25,768 p=9210 u=root n=ansible | skipping: no hosts matched
+2021-02-21 18:04:25,768 p=9210 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:04:45,856 p=9274 u=root n=ansible | [WARNING]: Unable to parse /home/mcalizo/6_sysadmin_tasks/inventory/host as an inventory source
+
+2021-02-21 18:04:45,856 p=9274 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-02-21 18:04:45,857 p=9274 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-02-21 18:04:46,045 p=9274 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:04:46,045 p=9274 u=root n=ansible | skipping: no hosts matched
+2021-02-21 18:04:46,045 p=9274 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:05:24,739 p=9345 u=root n=ansible | [WARNING]: Found both group and host with same name: localhost
+
+2021-02-21 18:05:24,931 p=9345 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:05:24,942 p=9345 u=root n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 18:05:25,144 p=9345 u=root n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: no such identity: /root/.ssh/rhel_insecure_private: No such file or directory\r\nrhel@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 18:05:27,378 p=9345 u=root n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.", "unreachable": true}
+2021-02-21 18:05:27,424 p=9345 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:05:27,461 p=9345 u=root n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2021-02-21 18:05:27,463 p=9345 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:05:27,464 p=9345 u=root n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:05:27,464 p=9345 u=root n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:05:27,464 p=9345 u=root n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:06:10,258 p=9425 u=root n=ansible | [WARNING]: Found both group and host with same name: localhost
+
+2021-02-21 18:06:10,444 p=9425 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:06:10,452 p=9425 u=root n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 18:06:10,657 p=9425 u=root n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: no such identity: /root/.ssh/rhel_insecure_private: No such file or directory\r\nrhel@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 18:06:10,659 p=9425 u=root n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: no such identity: /root/.ssh/rhel_insecure_private: No such file or directory\r\nrhel@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 18:06:10,677 p=9425 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:06:10,697 p=9425 u=root n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2021-02-21 18:06:10,698 p=9425 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:06:10,698 p=9425 u=root n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:06:10,698 p=9425 u=root n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:06:10,698 p=9425 u=root n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:07:48,835 p=9636 u=root n=ansible | [WARNING]: Found both group and host with same name: localhost
+
+2021-02-21 18:07:49,047 p=9636 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:07:49,054 p=9636 u=root n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 18:07:51,322 p=9636 u=root n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: no such identity: /root/.ssh/rhel_insecure_private: No such file or directory\r\nPermission denied, please try again.", "unreachable": true}
+2021-02-21 18:07:52,150 p=9636 u=root n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: no such identity: /root/.ssh/rhel_insecure_private: No such file or directory\r\nPermission denied, please try again.", "unreachable": true}
+2021-02-21 18:07:52,190 p=9636 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:07:52,220 p=9636 u=root n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2021-02-21 18:07:52,221 p=9636 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:07:52,221 p=9636 u=root n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:07:52,221 p=9636 u=root n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:07:52,221 p=9636 u=root n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:09:45,968 p=9825 u=root n=ansible | [WARNING]: Found both group and host with same name: localhost
+
+2021-02-21 18:09:46,182 p=9825 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:09:46,196 p=9825 u=root n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 18:09:47,968 p=9825 u=root n=ansible | ok: [master]
+2021-02-21 18:09:47,979 p=9825 u=root n=ansible | ok: [workernode1]
+2021-02-21 18:09:48,005 p=9825 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:09:48,042 p=9825 u=root n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2021-02-21 18:09:48,754 p=9825 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:09:48,936 p=9825 u=root n=ansible | changed: [master]
+2021-02-21 18:09:48,967 p=9825 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:09:49,598 p=9825 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:09:50,155 p=9825 u=root n=ansible | changed: [master]
+2021-02-21 18:09:50,169 p=9825 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:09:50,231 p=9825 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:09:50 up 10 min,  2 users,  load average: 0.81, 0.26, 0.13"
+    ]
+}
+2021-02-21 18:09:50,234 p=9825 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:10:57 up 10 min,  2 users,  load average: 0.18, 0.13, 0.11"
+    ]
+}
+2021-02-21 18:09:50,240 p=9825 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:09:50,877 p=9825 u=root n=ansible | changed: [master]
+2021-02-21 18:09:50,916 p=9825 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:09:50,925 p=9825 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:09:52,463 p=9825 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:09:52,887 p=9825 u=root n=ansible | changed: [master]
+2021-02-21 18:09:52,916 p=9825 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:09:53,651 p=9825 u=root n=ansible | changed: [master]
+2021-02-21 18:09:53,767 p=9825 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:09:53,774 p=9825 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:09:53,774 p=9825 u=root n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:09:53,775 p=9825 u=root n=ansible | master                     : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:09:53,775 p=9825 u=root n=ansible | workernode1                : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:10:28,052 p=10113 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:10:28,066 p=10113 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:10:28,677 p=10113 u=root n=ansible | changed: [master]
+2021-02-21 18:10:28,728 p=10113 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:10:28,762 p=10113 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:10:29,227 p=10113 u=root n=ansible | changed: [master]
+2021-02-21 18:10:29,265 p=10113 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:10:29,275 p=10113 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:10:29,318 p=10113 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:10:29 up 11 min,  2 users,  load average: 0.50, 0.24, 0.13"
+    ]
+}
+2021-02-21 18:10:29,327 p=10113 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:11:37 up 11 min,  2 users,  load average: 0.09, 0.11, 0.10"
+    ]
+}
+2021-02-21 18:10:29,334 p=10113 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:10:29,927 p=10113 u=root n=ansible | ok: [master]
+2021-02-21 18:10:29,979 p=10113 u=root n=ansible | ok: [workernode1]
+2021-02-21 18:10:29,994 p=10113 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:10:31,297 p=10113 u=root n=ansible | changed: [master]
+2021-02-21 18:10:31,317 p=10113 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:10:31,349 p=10113 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:10:32,017 p=10113 u=root n=ansible | changed: [master]
+2021-02-21 18:10:32,175 p=10113 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:10:32,183 p=10113 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:10:32,184 p=10113 u=root n=ansible | master                     : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:10:32,184 p=10113 u=root n=ansible | workernode1                : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:11:02,708 p=10272 u=root n=ansible | ansible-playbook 2.9.17
+  config file = /home/mcalizo/6_sysadmin_tasks/ansible.cfg
+  configured module search path = ['/home/mcalizo/6_sysadmin_tasks/library']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.1 (default, Jan 20 2021, 00:00:00) [GCC 10.2.1 20201125 (Red Hat 10.2.1-9)]
+2021-02-21 18:11:02,708 p=10272 u=root n=ansible | Using /home/mcalizo/6_sysadmin_tasks/ansible.cfg as config file
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-02-21 18:11:02,901 p=10272 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-02-21 18:11:02,902 p=10272 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-02-21 18:11:02,902 p=10272 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-02-21 18:11:02,902 p=10272 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-02-21 18:11:02,902 p=10272 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-02-21 18:11:02,902 p=10272 u=root n=ansible | PLAYBOOK: c_uptime.yml *************************************************************************************************************************************************
+2021-02-21 18:11:02,902 p=10272 u=root n=ansible | 1 plays in playbooks/c_uptime.yml
+2021-02-21 18:11:02,903 p=10272 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:11:02,908 p=10272 u=root n=ansible | META: ran handlers
+2021-02-21 18:11:02,920 p=10272 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:11:03,543 p=10272 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.002954", "end": "2021-02-21 00:11:03.458407", "rc": 0, "start": "2021-02-21 00:11:03.455453", "stderr": "", "stderr_lines": [], "stdout": "20210221001103", "stdout_lines": ["20210221001103"]}
+2021-02-21 18:11:03,587 p=10272 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.002720", "end": "2021-02-21 18:12:11.987797", "rc": 0, "start": "2021-02-21 18:12:11.985077", "stderr": "", "stderr_lines": [], "stdout": "20210221181211", "stdout_lines": ["20210221181211"]}
+2021-02-21 18:11:03,623 p=10272 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:11:04,224 p=10272 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "uptime", "delta": "0:00:00.007083", "end": "2021-02-21 00:11:04.122072", "rc": 0, "start": "2021-02-21 00:11:04.114989", "stderr": "", "stderr_lines": [], "stdout": " 00:11:04 up 11 min,  2 users,  load average: 0.34, 0.23, 0.13", "stdout_lines": [" 00:11:04 up 11 min,  2 users,  load average: 0.34, 0.23, 0.13"]}
+2021-02-21 18:11:04,280 p=10272 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "uptime", "delta": "0:00:00.003764", "end": "2021-02-21 18:12:12.643441", "rc": 0, "start": "2021-02-21 18:12:12.639677", "stderr": "", "stderr_lines": [], "stdout": " 18:12:12 up 11 min,  2 users,  load average: 0.13, 0.12, 0.10", "stdout_lines": [" 18:12:12 up 11 min,  2 users,  load average: 0.13, 0.12, 0.10"]}
+2021-02-21 18:11:04,327 p=10272 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:11:04,386 p=10272 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:11:04 up 11 min,  2 users,  load average: 0.34, 0.23, 0.13"
+    ]
+}
+2021-02-21 18:11:04,393 p=10272 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:12:12 up 11 min,  2 users,  load average: 0.13, 0.12, 0.10"
+    ]
+}
+2021-02-21 18:11:04,402 p=10272 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:11:05,047 p=10272 u=root n=ansible | ok: [master] => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/var/tmp", "secontext": "system_u:object_r:tmp_t:s0", "size": 165, "state": "directory", "uid": 0}
+2021-02-21 18:11:05,107 p=10272 u=root n=ansible | ok: [workernode1] => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/var/tmp", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "uid": 0}
+2021-02-21 18:11:05,155 p=10272 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:11:06,519 p=10272 u=root n=ansible | changed: [master] => {"changed": true, "checksum": "805c1c69624d1c38c2d9984573eefabcb735be90", "dest": "/var/tmp/uptime-master-20210221001103.txt", "gid": 0, "group": "root", "md5sum": "c11a8821b6b48294b977ca777428d376", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:admin_home_t:s0", "size": 248, "src": "/root/.ansible/tmp/ansible-tmp-1613884265.214326-10335-11682568952808/source", "state": "file", "uid": 0}
+2021-02-21 18:11:06,564 p=10272 u=root n=ansible | changed: [workernode1] => {"changed": true, "checksum": "233a29cbe3208356ee56d20670828ead28354903", "dest": "/var/tmp/uptime-workernode1-20210221181211.txt", "gid": 0, "group": "root", "md5sum": "e1520d3ba3755de36ff730b6db582d09", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:admin_home_t:s0", "size": 253, "src": "/root/.ansible/tmp/ansible-tmp-1613884265.224176-10336-33324931956669/source", "state": "file", "uid": 0}
+2021-02-21 18:11:06,578 p=10272 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:11:07,264 p=10272 u=root n=ansible | changed: [master] => {"changed": true, "checksum": "805c1c69624d1c38c2d9984573eefabcb735be90", "dest": "/var/tmp/uptime-master-20210221001103.txt", "md5sum": "c11a8821b6b48294b977ca777428d376", "remote_checksum": "805c1c69624d1c38c2d9984573eefabcb735be90", "remote_md5sum": null}
+2021-02-21 18:11:07,351 p=10272 u=root n=ansible | changed: [workernode1] => {"changed": true, "checksum": "233a29cbe3208356ee56d20670828ead28354903", "dest": "/var/tmp/uptime-workernode1-20210221181211.txt", "md5sum": "e1520d3ba3755de36ff730b6db582d09", "remote_checksum": "233a29cbe3208356ee56d20670828ead28354903", "remote_md5sum": null}
+2021-02-21 18:11:07,354 p=10272 u=root n=ansible | META: ran handlers
+2021-02-21 18:11:07,356 p=10272 u=root n=ansible | META: ran handlers
+2021-02-21 18:11:07,360 p=10272 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:11:07,361 p=10272 u=root n=ansible | master                     : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:11:07,361 p=10272 u=root n=ansible | workernode1                : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:14:37,475 p=11125 u=root n=ansible | ERROR! the playbook: - could not be found
+2021-02-21 18:14:39,746 p=11134 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:14:39,761 p=11134 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:14:39,984 p=11134 u=root n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 18:14:39,986 p=11134 u=root n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 18:14:39,989 p=11134 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:14:39,989 p=11134 u=root n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:14:39,990 p=11134 u=root n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:17:04,297 p=11510 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:17:04,311 p=11510 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:17:05,206 p=11510 u=root n=ansible | changed: [master]
+2021-02-21 18:17:05,276 p=11510 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:05,289 p=11510 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:17:05,789 p=11510 u=root n=ansible | changed: [master]
+2021-02-21 18:17:05,876 p=11510 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:05,919 p=11510 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:17:05,974 p=11510 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:17:05 up 17 min,  2 users,  load average: 0.23, 0.27, 0.18"
+    ]
+}
+2021-02-21 18:17:05,984 p=11510 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:18:14 up 17 min,  2 users,  load average: 0.14, 0.08, 0.08"
+    ]
+}
+2021-02-21 18:17:05,991 p=11510 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:17:06,649 p=11510 u=root n=ansible | ok: [master]
+2021-02-21 18:17:06,702 p=11510 u=root n=ansible | ok: [workernode1]
+2021-02-21 18:17:06,729 p=11510 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:17:08,208 p=11510 u=root n=ansible | changed: [master]
+2021-02-21 18:17:08,248 p=11510 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:08,257 p=11510 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:17:08,954 p=11510 u=root n=ansible | changed: [master]
+2021-02-21 18:17:09,048 p=11510 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:09,054 p=11510 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:17:09,055 p=11510 u=root n=ansible | master                     : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:17:09,055 p=11510 u=root n=ansible | workernode1                : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:17:49,883 p=11773 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:17:49,897 p=11773 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:17:50,486 p=11773 u=root n=ansible | changed: [master]
+2021-02-21 18:17:50,527 p=11773 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:50,561 p=11773 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:17:51,108 p=11773 u=root n=ansible | changed: [master]
+2021-02-21 18:17:51,173 p=11773 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:51,199 p=11773 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:17:51,248 p=11773 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:17:50 up 18 min,  2 users,  load average: 0.11, 0.23, 0.17"
+    ]
+}
+2021-02-21 18:17:51,254 p=11773 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:18:59 up 18 min,  2 users,  load average: 0.06, 0.07, 0.08"
+    ]
+}
+2021-02-21 18:17:51,261 p=11773 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:17:51,939 p=11773 u=root n=ansible | ok: [master]
+2021-02-21 18:17:52,008 p=11773 u=root n=ansible | ok: [workernode1]
+2021-02-21 18:17:52,050 p=11773 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:17:53,459 p=11773 u=root n=ansible | changed: [master]
+2021-02-21 18:17:53,487 p=11773 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:53,498 p=11773 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:17:54,148 p=11773 u=root n=ansible | changed: [master]
+2021-02-21 18:17:54,172 p=11773 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:17:54,174 p=11773 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:17:54,174 p=11773 u=root n=ansible | master                     : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:17:54,174 p=11773 u=root n=ansible | workernode1                : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:44:16,269 p=15569 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:44:16,283 p=15569 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:44:17,239 p=15569 u=root n=ansible | changed: [master]
+2021-02-21 18:44:17,266 p=15569 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:44:17,274 p=15569 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:44:17,813 p=15569 u=root n=ansible | changed: [master]
+2021-02-21 18:44:17,905 p=15569 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:44:17,949 p=15569 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:44:18,008 p=15569 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:44:17 up 44 min,  2 users,  load average: 0.01, 0.09, 0.09"
+    ]
+}
+2021-02-21 18:44:18,017 p=15569 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:45:26 up 44 min,  2 users,  load average: 0.01, 0.01, 0.00"
+    ]
+}
+2021-02-21 18:44:18,025 p=15569 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:44:18,723 p=15569 u=root n=ansible | ok: [master]
+2021-02-21 18:44:18,758 p=15569 u=root n=ansible | ok: [workernode1]
+2021-02-21 18:44:18,799 p=15569 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:44:20,378 p=15569 u=root n=ansible | changed: [master]
+2021-02-21 18:44:20,790 p=15569 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:44:20,817 p=15569 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 18:44:21,414 p=15569 u=root n=ansible | changed: [master]
+2021-02-21 18:44:21,564 p=15569 u=root n=ansible | changed: [workernode1]
+2021-02-21 18:44:21,569 p=15569 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:44:21,569 p=15569 u=root n=ansible | master                     : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:44:21,570 p=15569 u=root n=ansible | workernode1                : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:46:40,878 p=16076 u=root n=ansible | ansible-playbook 2.9.17
+  config file = /home/mcalizo/6_sysadmin_tasks/ansible.cfg
+  configured module search path = ['/home/mcalizo/6_sysadmin_tasks/library']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.1 (default, Jan 20 2021, 00:00:00) [GCC 10.2.1 20201125 (Red Hat 10.2.1-9)]
+2021-02-21 18:46:40,878 p=16076 u=root n=ansible | Using /home/mcalizo/6_sysadmin_tasks/ansible.cfg as config file
+2021-02-21 18:46:44,067 p=16076 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-02-21 18:46:44,068 p=16076 u=root n=ansible | PLAYBOOK: c_uptime.yml *************************************************************************************************************************************************
+2021-02-21 18:46:44,069 p=16076 u=root n=ansible | 1 plays in playbooks/c_uptime.yml
+2021-02-21 18:46:44,070 p=16076 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 18:46:44,074 p=16076 u=root n=ansible | META: ran handlers
+2021-02-21 18:46:44,085 p=16076 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 18:46:44,983 p=16076 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.003377", "end": "2021-02-21 00:46:44.912306", "rc": 0, "start": "2021-02-21 00:46:44.908929", "stderr": "", "stderr_lines": [], "stdout": "20210221004644", "stdout_lines": ["20210221004644"]}
+2021-02-21 18:46:45,053 p=16076 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.003295", "end": "2021-02-21 18:47:53.440972", "rc": 0, "start": "2021-02-21 18:47:53.437677", "stderr": "", "stderr_lines": [], "stdout": "20210221184753", "stdout_lines": ["20210221184753"]}
+2021-02-21 18:46:45,070 p=16076 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 18:46:45,625 p=16076 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "uptime", "delta": "0:00:00.004474", "end": "2021-02-21 00:46:45.550760", "rc": 0, "start": "2021-02-21 00:46:45.546286", "stderr": "", "stderr_lines": [], "stdout": " 00:46:45 up 47 min,  2 users,  load average: 0.43, 0.21, 0.13", "stdout_lines": [" 00:46:45 up 47 min,  2 users,  load average: 0.43, 0.21, 0.13"]}
+2021-02-21 18:46:45,694 p=16076 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "uptime", "delta": "0:00:00.004587", "end": "2021-02-21 18:47:54.094414", "rc": 0, "start": "2021-02-21 18:47:54.089827", "stderr": "", "stderr_lines": [], "stdout": " 18:47:54 up 47 min,  2 users,  load average: 0.00, 0.00, 0.00", "stdout_lines": [" 18:47:54 up 47 min,  2 users,  load average: 0.00, 0.00, 0.00"]}
+2021-02-21 18:46:45,705 p=16076 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 18:46:45,752 p=16076 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 00:46:45 up 47 min,  2 users,  load average: 0.43, 0.21, 0.13"
+    ]
+}
+2021-02-21 18:46:45,762 p=16076 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 18:47:54 up 47 min,  2 users,  load average: 0.00, 0.00, 0.00"
+    ]
+}
+2021-02-21 18:46:45,770 p=16076 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 18:46:46,408 p=16076 u=root n=ansible | ok: [master] => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/var/tmp", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "uid": 0}
+2021-02-21 18:46:46,441 p=16076 u=root n=ansible | ok: [workernode1] => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/var/tmp", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "uid": 0}
+2021-02-21 18:46:46,477 p=16076 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 18:46:46,614 p=16076 u=root n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: Expected an expression, got 'end of print statement'. String: \n----------------------------------------------------\nUptime for {{ }}\n\n-----------------------------------------------------\n Uptime for  {{ inventory_hostname }}\n-----------------------------------------------------\n{{ uptime.stdout }}\n-----------------------------------------------------\n"}
+2021-02-21 18:46:46,649 p=16076 u=root n=ansible | fatal: [workernode1]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: Expected an expression, got 'end of print statement'. String: \n----------------------------------------------------\nUptime for {{ }}\n\n-----------------------------------------------------\n Uptime for  {{ inventory_hostname }}\n-----------------------------------------------------\n{{ uptime.stdout }}\n-----------------------------------------------------\n"}
+2021-02-21 18:46:46,650 p=16076 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 18:46:46,651 p=16076 u=root n=ansible | master                     : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 18:46:46,651 p=16076 u=root n=ansible | workernode1                : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:07:52,113 p=18200 u=root n=ansible | ansible-playbook 2.9.17
+  config file = /home/mcalizo/6_sysadmin_tasks/ansible.cfg
+  configured module search path = ['/home/mcalizo/6_sysadmin_tasks/library']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.1 (default, Jan 20 2021, 00:00:00) [GCC 10.2.1 20201125 (Red Hat 10.2.1-9)]
+2021-02-21 19:07:52,113 p=18200 u=root n=ansible | Using /home/mcalizo/6_sysadmin_tasks/ansible.cfg as config file
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-02-21 19:07:54,831 p=18200 u=root n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-02-21 19:07:54,832 p=18200 u=root n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-02-21 19:07:54,832 p=18200 u=root n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-02-21 19:07:54,832 p=18200 u=root n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-02-21 19:07:54,832 p=18200 u=root n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-02-21 19:07:54,832 p=18200 u=root n=ansible | PLAYBOOK: c_uptime.yml *************************************************************************************************************************************************
+2021-02-21 19:07:54,832 p=18200 u=root n=ansible | 1 plays in playbooks/c_uptime.yml
+2021-02-21 19:07:54,833 p=18200 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 19:07:54,838 p=18200 u=root n=ansible | META: ran handlers
+2021-02-21 19:07:54,848 p=18200 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 19:07:55,688 p=18200 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.003529", "end": "2021-02-21 01:07:55.610511", "rc": 0, "start": "2021-02-21 01:07:55.606982", "stderr": "", "stderr_lines": [], "stdout": "20210221010755", "stdout_lines": ["20210221010755"]}
+2021-02-21 19:07:55,712 p=18200 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.002820", "end": "2021-02-21 19:09:04.114636", "rc": 0, "start": "2021-02-21 19:09:04.111816", "stderr": "", "stderr_lines": [], "stdout": "20210221190904", "stdout_lines": ["20210221190904"]}
+2021-02-21 19:07:55,746 p=18200 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 19:07:56,155 p=18200 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "uptime", "delta": "0:00:00.005928", "end": "2021-02-21 01:07:56.064497", "rc": 0, "start": "2021-02-21 01:07:56.058569", "stderr": "", "stderr_lines": [], "stdout": " 01:07:56 up  1:08,  2 users,  load average: 0.18, 0.21, 0.15", "stdout_lines": [" 01:07:56 up  1:08,  2 users,  load average: 0.18, 0.21, 0.15"]}
+2021-02-21 19:07:56,235 p=18200 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "uptime", "delta": "0:00:00.004486", "end": "2021-02-21 19:09:04.633987", "rc": 0, "start": "2021-02-21 19:09:04.629501", "stderr": "", "stderr_lines": [], "stdout": " 19:09:04 up  1:08,  2 users,  load average: 0.00, 0.00, 0.00", "stdout_lines": [" 19:09:04 up  1:08,  2 users,  load average: 0.00, 0.00, 0.00"]}
+2021-02-21 19:07:56,251 p=18200 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 19:07:56,310 p=18200 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 01:07:56 up  1:08,  2 users,  load average: 0.18, 0.21, 0.15"
+    ]
+}
+2021-02-21 19:07:56,325 p=18200 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 19:09:04 up  1:08,  2 users,  load average: 0.00, 0.00, 0.00"
+    ]
+}
+2021-02-21 19:07:56,333 p=18200 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 19:07:56,921 p=18200 u=root n=ansible | ok: [master] => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/var/tmp", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "uid": 0}
+2021-02-21 19:07:56,968 p=18200 u=root n=ansible | ok: [workernode1] => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/var/tmp", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "uid": 0}
+2021-02-21 19:07:56,982 p=18200 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 19:07:57,090 p=18200 u=root n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: Expected an expression, got 'end of print statement'. String: \n----------------------------------------------------\nUptime for {{ }}\n\n-----------------------------------------------------\n Uptime for  {{ inventory_hostname }}\n-----------------------------------------------------\n{{ uptime.stdout }}\n-----------------------------------------------------\n"}
+2021-02-21 19:07:57,140 p=18200 u=root n=ansible | fatal: [workernode1]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: Expected an expression, got 'end of print statement'. String: \n----------------------------------------------------\nUptime for {{ }}\n\n-----------------------------------------------------\n Uptime for  {{ inventory_hostname }}\n-----------------------------------------------------\n{{ uptime.stdout }}\n-----------------------------------------------------\n"}
+2021-02-21 19:07:57,141 p=18200 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 19:07:57,141 p=18200 u=root n=ansible | master                     : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:07:57,141 p=18200 u=root n=ansible | workernode1                : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:10:04,742 p=18581 u=root n=ansible | PLAY [Check Uptime for Servers] ****************************************************************************************************************************************
+2021-02-21 19:10:04,756 p=18581 u=root n=ansible | TASK [check_uptime : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 19:10:05,530 p=18581 u=root n=ansible | changed: [master]
+2021-02-21 19:10:05,556 p=18581 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:10:05,564 p=18581 u=root n=ansible | TASK [check_uptime : Check Uptime] *************************************************************************************************************************************
+2021-02-21 19:10:05,931 p=18581 u=root n=ansible | changed: [master]
+2021-02-21 19:10:05,984 p=18581 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:10:05,992 p=18581 u=root n=ansible | TASK [check_uptime : Output Uptime] ************************************************************************************************************************************
+2021-02-21 19:10:06,031 p=18581 u=root n=ansible | ok: [master] => {
+    "msg": [
+        " 01:10:05 up  1:10,  2 users,  load average: 0.12, 0.16, 0.14"
+    ]
+}
+2021-02-21 19:10:06,037 p=18581 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        " 19:11:14 up  1:10,  2 users,  load average: 0.07, 0.02, 0.00"
+    ]
+}
+2021-02-21 19:10:06,043 p=18581 u=root n=ansible | TASK [check_uptime : Create dump directory] ****************************************************************************************************************************
+2021-02-21 19:10:06,595 p=18581 u=root n=ansible | ok: [master]
+2021-02-21 19:10:06,645 p=18581 u=root n=ansible | ok: [workernode1]
+2021-02-21 19:10:06,666 p=18581 u=root n=ansible | TASK [check_uptime : Deploy template output] ***************************************************************************************************************************
+2021-02-21 19:10:07,903 p=18581 u=root n=ansible | changed: [master]
+2021-02-21 19:10:07,948 p=18581 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:10:07,962 p=18581 u=root n=ansible | TASK [check_uptime : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 19:10:08,473 p=18581 u=root n=ansible | changed: [master]
+2021-02-21 19:10:08,537 p=18581 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:10:08,540 p=18581 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 19:10:08,540 p=18581 u=root n=ansible | master                     : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:10:08,540 p=18581 u=root n=ansible | workernode1                : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:33:01,399 p=21314 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: yum
+
+2021-02-21 19:33:01,399 p=21314 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: install
+
+2021-02-21 19:33:01,400 p=21314 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: iotop
+
+2021-02-21 19:33:01,400 p=21314 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: -y
+
+2021-02-21 19:33:01,400 p=21314 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2021-02-21 19:33:01,402 p=21314 u=root n=ansible | ERROR! No argument passed to command module
+2021-02-21 19:33:47,205 p=21392 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: yum
+
+2021-02-21 19:33:47,205 p=21392 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: install
+
+2021-02-21 19:33:47,205 p=21392 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: iotop
+
+2021-02-21 19:33:47,205 p=21392 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: -y
+
+2021-02-21 19:33:47,205 p=21392 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2021-02-21 19:33:47,208 p=21392 u=root n=ansible | ERROR! No argument passed to shell module
+2021-02-21 19:36:34,256 p=21848 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-02-21 19:36:34,256 p=21848 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 192.168.1.12
+
+2021-02-21 19:36:49,642 p=21869 u=root n=ansible | master | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-02-21 19:36:49,651 p=21869 u=root n=ansible | workernode1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-02-21 19:37:02,838 p=21880 u=root n=ansible | [WARNING]: Consider using the yum module rather than running 'yum'.  If you need to use command because yum is insufficient you can add 'warn: false' to this command
+task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2021-02-21 19:37:02,838 p=21880 u=root n=ansible | master | CHANGED | rc=0 >>
+Updating Subscription Management repositories.
+Last metadata expiration check: 1:27:06 ago on Sun 21 Feb 2021 00:09:53 EST.
+Dependencies resolved.
+================================================================================
+ Package   Arch       Version           Repository                         Size
+================================================================================
+Installing:
+ iotop     noarch     0.6-16.el8        rhel-8-for-x86_64-baseos-rpms      66 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 66 k
+Installed size: 170 k
+Downloading Packages:
+iotop-0.6-16.el8.noarch.rpm                     141 kB/s |  66 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           141 kB/s |  66 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : iotop-0.6-16.el8.noarch                                1/1 
+  Running scriptlet: iotop-0.6-16.el8.noarch                                1/1 
+  Verifying        : iotop-0.6-16.el8.noarch                                1/1 
+Installed products updated.
+
+Installed:
+  iotop-0.6-16.el8.noarch                                                       
+
+Complete!Warning: failed loading '/etc/yum.repos.d/devel:kubic:libcontainers:stable.repo', skipping.
+Warning: failed loading '/etc/yum.repos.d/devel:kubic:libcontainers:stable:cri-o:.repo', skipping.
+
+2021-02-21 19:37:03,110 p=21880 u=root n=ansible | workernode1 | CHANGED | rc=0 >>
+Updating Subscription Management repositories.
+Last metadata expiration check: 1:27:24 ago on Sun 21 Feb 2021 18:10:44 NZDT.
+Dependencies resolved.
+================================================================================
+ Package   Arch       Version           Repository                         Size
+================================================================================
+Installing:
+ iotop     noarch     0.6-16.el8        rhel-8-for-x86_64-baseos-rpms      66 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 66 k
+Installed size: 170 k
+Downloading Packages:
+iotop-0.6-16.el8.noarch.rpm                     225 kB/s |  66 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           224 kB/s |  66 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : iotop-0.6-16.el8.noarch                                1/1 
+  Running scriptlet: iotop-0.6-16.el8.noarch                                1/1 
+  Verifying        : iotop-0.6-16.el8.noarch                                1/1 
+Installed products updated.
+
+Installed:
+  iotop-0.6-16.el8.noarch                                                       
+
+Complete!Repository 'kubernetes' is missing name in configuration, using id.
+
+2021-02-21 19:37:30,076 p=21953 u=root n=ansible | master | CHANGED | rc=0 >>
+[?1049h[22;0;0t[1;24r(B[m[4l[?7h[?1l>
+
+2021-02-21 19:37:30,163 p=21953 u=root n=ansible | workernode1 | CHANGED | rc=0 >>
+[?1049h[22;0;0t[1;24r(B[m[4l[?7h[?1l>
+
+2021-02-21 19:38:23,186 p=22098 u=root n=ansible | Using /home/mcalizo/6_sysadmin_tasks/ansible.cfg as config file
+2021-02-21 19:38:25,720 p=22098 u=root n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 19:38:25,735 p=22098 u=root n=ansible | TASK [install_cron : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 19:38:26,308 p=22098 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.003052", "end": "2021-02-21 01:38:26.243922", "rc": 0, "start": "2021-02-21 01:38:26.240870", "stderr": "", "stderr_lines": [], "stdout": "20210221013826", "stdout_lines": ["20210221013826"]}
+2021-02-21 19:38:26,366 p=22098 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.002777", "end": "2021-02-21 19:39:34.764689", "rc": 0, "start": "2021-02-21 19:39:34.761912", "stderr": "", "stderr_lines": [], "stdout": "20210221193934", "stdout_lines": ["20210221193934"]}
+2021-02-21 19:38:26,414 p=22098 u=root n=ansible | TASK [install_cron : Check the crontab for root (Before)] **************************************************************************************************************
+2021-02-21 19:38:26,898 p=22098 u=root n=ansible | fatal: [master]: FAILED! => {"changed": true, "cmd": "crontab -l", "delta": "0:00:00.005118", "end": "2021-02-21 01:38:26.803112", "msg": "non-zero return code", "rc": 1, "start": "2021-02-21 01:38:26.797994", "stderr": "no crontab for root", "stderr_lines": ["no crontab for root"], "stdout": "", "stdout_lines": []}
+2021-02-21 19:38:26,979 p=22098 u=root n=ansible | fatal: [workernode1]: FAILED! => {"changed": true, "cmd": "crontab -l", "delta": "0:00:00.004481", "end": "2021-02-21 19:39:35.354307", "msg": "non-zero return code", "rc": 1, "start": "2021-02-21 19:39:35.349826", "stderr": "no crontab for root", "stderr_lines": ["no crontab for root"], "stdout": "", "stdout_lines": []}
+2021-02-21 19:38:26,982 p=22098 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 19:38:26,983 p=22098 u=root n=ansible | master                     : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:38:26,983 p=22098 u=root n=ansible | workernode1                : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:41:40,437 p=22490 u=root n=ansible | Using /home/mcalizo/6_sysadmin_tasks/ansible.cfg as config file
+2021-02-21 19:41:42,941 p=22490 u=root n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 19:41:42,956 p=22490 u=root n=ansible | TASK [install_cron : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 19:41:43,882 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.003597", "end": "2021-02-21 01:41:43.793932", "rc": 0, "start": "2021-02-21 01:41:43.790335", "stderr": "", "stderr_lines": [], "stdout": "20210221014143", "stdout_lines": ["20210221014143"]}
+2021-02-21 19:41:43,936 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "date +\"%Y%m%d%H%M%S\"", "delta": "0:00:00.002862", "end": "2021-02-21 19:42:52.331843", "rc": 0, "start": "2021-02-21 19:42:52.328981", "stderr": "", "stderr_lines": [], "stdout": "20210221194252", "stdout_lines": ["20210221194252"]}
+2021-02-21 19:41:43,953 p=22490 u=root n=ansible | TASK [install_cron : Check the crontab for root (Before)] **************************************************************************************************************
+2021-02-21 19:41:44,443 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "crontab -l", "delta": "0:00:00.004055", "end": "2021-02-21 01:41:44.356401", "rc": 0, "start": "2021-02-21 01:41:44.352346", "stderr": "", "stderr_lines": [], "stdout": "1 2 3 4 5 /usr/bin/ls /tmp", "stdout_lines": ["1 2 3 4 5 /usr/bin/ls /tmp"]}
+2021-02-21 19:41:44,507 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "crontab -l", "delta": "0:00:00.003866", "end": "2021-02-21 19:42:52.892537", "rc": 0, "start": "2021-02-21 19:42:52.888671", "stderr": "", "stderr_lines": [], "stdout": "1 2 3 4 5 /usr/bin/ls /tmp", "stdout_lines": ["1 2 3 4 5 /usr/bin/ls /tmp"]}
+2021-02-21 19:41:44,523 p=22490 u=root n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 19:41:44,567 p=22490 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp"
+    ]
+}
+2021-02-21 19:41:44,574 p=22490 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp"
+    ]
+}
+2021-02-21 19:41:44,583 p=22490 u=root n=ansible | TASK [install_cron : Save the crontab output for root before the change] ***********************************************************************************************
+2021-02-21 19:41:45,969 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "checksum": "134a4090a775fbc54723b0cb37448c86ef8e05eb", "dest": "/var/tmp/cron-before-master-20210221014143.txt", "gid": 0, "group": "root", "md5sum": "db949c9aee3e17cd8cea84ec8da8b10a", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:admin_home_t:s0", "size": 218, "src": "/root/.ansible/tmp/ansible-tmp-1613889704.6143608-22559-99098100451022/source", "state": "file", "uid": 0}
+2021-02-21 19:41:46,024 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "checksum": "1b36bd3ecb7f206b9f08b73896ffc0d09fe1f729", "dest": "/var/tmp/cron-before-workernode1-20210221194252.txt", "gid": 0, "group": "root", "md5sum": "b16f539e707bf7848c068f7e73453857", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:admin_home_t:s0", "size": 223, "src": "/root/.ansible/tmp/ansible-tmp-1613889704.6237652-22560-64843880307339/source", "state": "file", "uid": 0}
+2021-02-21 19:41:46,039 p=22490 u=root n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 19:41:46,723 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "checksum": "134a4090a775fbc54723b0cb37448c86ef8e05eb", "dest": "/var/tmp/cron-before-master-20210221014143.txt", "md5sum": "db949c9aee3e17cd8cea84ec8da8b10a", "remote_checksum": "134a4090a775fbc54723b0cb37448c86ef8e05eb", "remote_md5sum": null}
+2021-02-21 19:41:46,756 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "checksum": "1b36bd3ecb7f206b9f08b73896ffc0d09fe1f729", "dest": "/var/tmp/cron-before-workernode1-20210221194252.txt", "md5sum": "b16f539e707bf7848c068f7e73453857", "remote_checksum": "1b36bd3ecb7f206b9f08b73896ffc0d09fe1f729", "remote_md5sum": null}
+2021-02-21 19:41:46,775 p=22490 u=root n=ansible | TASK [install_cron : Install a new cron job entry] *********************************************************************************************************************
+2021-02-21 19:41:47,541 p=22490 u=root n=ansible | [WARNING]: The value 0 (type int) in a string field was converted to '0' (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-02-21 19:41:47,542 p=22490 u=root n=ansible | changed: [master] => {"backup_file": "/tmp/crontab7cl30pha", "changed": true, "envs": [], "jobs": ["Iotop Monitoring"]}
+2021-02-21 19:41:47,595 p=22490 u=root n=ansible | changed: [workernode1] => {"backup_file": "/tmp/crontab8iv5a42e", "changed": true, "envs": [], "jobs": ["Iotop Monitoring"]}
+2021-02-21 19:41:47,639 p=22490 u=root n=ansible | TASK [install_cron : Check the crontab for root (After)] ***************************************************************************************************************
+2021-02-21 19:41:48,101 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "cmd": "crontab -l", "delta": "0:00:00.003569", "end": "2021-02-21 01:41:48.013131", "rc": 0, "start": "2021-02-21 01:41:48.009562", "stderr": "", "stderr_lines": [], "stdout": "1 2 3 4 5 /usr/bin/ls /tmp\n#Ansible: Iotop Monitoring\n0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err", "stdout_lines": ["1 2 3 4 5 /usr/bin/ls /tmp", "#Ansible: Iotop Monitoring", "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"]}
+2021-02-21 19:41:48,183 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "cmd": "crontab -l", "delta": "0:00:00.003694", "end": "2021-02-21 19:42:56.579343", "rc": 0, "start": "2021-02-21 19:42:56.575649", "stderr": "", "stderr_lines": [], "stdout": "1 2 3 4 5 /usr/bin/ls /tmp\n#Ansible: Iotop Monitoring\n0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err", "stdout_lines": ["1 2 3 4 5 /usr/bin/ls /tmp", "#Ansible: Iotop Monitoring", "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"]}
+2021-02-21 19:41:48,214 p=22490 u=root n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 19:41:48,255 p=22490 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 19:41:48,264 p=22490 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 19:41:48,271 p=22490 u=root n=ansible | TASK [install_cron : Save the crontab output for root after the change] ************************************************************************************************
+2021-02-21 19:41:49,436 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "checksum": "ad4cbc87fc2c217686ec4ec112103219b789eb64", "dest": "/var/tmp/cron-after-master-20210221014143.txt", "gid": 0, "group": "root", "md5sum": "c9d9f7afb6fab44629b19052bc02f524", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:admin_home_t:s0", "size": 326, "src": "/root/.ansible/tmp/ansible-tmp-1613889708.301685-22709-224381386888086/source", "state": "file", "uid": 0}
+2021-02-21 19:41:49,515 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "checksum": "df9f5a0d82b4f232d2158b056c51e7155b79bdcb", "dest": "/var/tmp/cron-after-workernode1-20210221194252.txt", "gid": 0, "group": "root", "md5sum": "cf49d242f072ae41462ef206a91a0c72", "mode": "0644", "owner": "root", "secontext": "unconfined_u:object_r:admin_home_t:s0", "size": 331, "src": "/root/.ansible/tmp/ansible-tmp-1613889708.3148348-22710-256263253627589/source", "state": "file", "uid": 0}
+2021-02-21 19:41:49,551 p=22490 u=root n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 19:41:50,208 p=22490 u=root n=ansible | changed: [master] => {"changed": true, "checksum": "ad4cbc87fc2c217686ec4ec112103219b789eb64", "dest": "/var/tmp/cron-after-master-20210221014143.txt", "md5sum": "c9d9f7afb6fab44629b19052bc02f524", "remote_checksum": "ad4cbc87fc2c217686ec4ec112103219b789eb64", "remote_md5sum": null}
+2021-02-21 19:41:50,235 p=22490 u=root n=ansible | changed: [workernode1] => {"changed": true, "checksum": "df9f5a0d82b4f232d2158b056c51e7155b79bdcb", "dest": "/var/tmp/cron-after-workernode1-20210221194252.txt", "md5sum": "cf49d242f072ae41462ef206a91a0c72", "remote_checksum": "df9f5a0d82b4f232d2158b056c51e7155b79bdcb", "remote_md5sum": null}
+2021-02-21 19:41:50,245 p=22490 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 19:41:50,246 p=22490 u=root n=ansible | master                     : ok=10   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:41:50,247 p=22490 u=root n=ansible | workernode1                : ok=10   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:42:20,177 p=22824 u=root n=ansible | master | CHANGED | rc=0 >>
+1 2 3 4 5 /usr/bin/ls /tmp
+#Ansible: Iotop Monitoring
+0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err
+
+2021-02-21 19:42:20,245 p=22824 u=root n=ansible | workernode1 | CHANGED | rc=0 >>
+1 2 3 4 5 /usr/bin/ls /tmp
+#Ansible: Iotop Monitoring
+0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err
+
+2021-02-21 19:45:04,608 p=23143 u=root n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 19:45:04,622 p=23143 u=root n=ansible | TASK [install_cron : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 19:45:05,650 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:05,677 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:05,696 p=23143 u=root n=ansible | TASK [install_cron : Check the crontab for root (Before)] **************************************************************************************************************
+2021-02-21 19:45:06,196 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:06,255 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:06,266 p=23143 u=root n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 19:45:06,319 p=23143 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 19:45:06,331 p=23143 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 19:45:06,340 p=23143 u=root n=ansible | TASK [install_cron : Save the crontab output for root before the change] ***********************************************************************************************
+2021-02-21 19:45:07,878 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:07,936 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:07,950 p=23143 u=root n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 19:45:08,569 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:08,592 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:08,605 p=23143 u=root n=ansible | TASK [install_cron : Install a new cron job entry] *********************************************************************************************************************
+2021-02-21 19:45:09,307 p=23143 u=root n=ansible | [WARNING]: The value 0 (type int) in a string field was converted to '0' (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-02-21 19:45:09,307 p=23143 u=root n=ansible | ok: [master]
+2021-02-21 19:45:09,325 p=23143 u=root n=ansible | ok: [workernode1]
+2021-02-21 19:45:09,332 p=23143 u=root n=ansible | TASK [install_cron : Check the crontab for root (After)] ***************************************************************************************************************
+2021-02-21 19:45:09,924 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:09,937 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:09,953 p=23143 u=root n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 19:45:09,995 p=23143 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 19:45:10,003 p=23143 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 19:45:10,010 p=23143 u=root n=ansible | TASK [install_cron : Save the crontab output for root after the change] ************************************************************************************************
+2021-02-21 19:45:11,140 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:11,275 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:11,307 p=23143 u=root n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 19:45:12,013 p=23143 u=root n=ansible | changed: [master]
+2021-02-21 19:45:12,059 p=23143 u=root n=ansible | changed: [workernode1]
+2021-02-21 19:45:12,063 p=23143 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 19:45:12,063 p=23143 u=root n=ansible | master                     : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 19:45:12,063 p=23143 u=root n=ansible | workernode1                : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,8 +1,6 @@
 ---
 - name: Check Uptime for Servers
-  hosts: localhost
-#  remote_user: tejalj
-#  become: yes
+  hosts: all
   roles:
    - check_uptime
 

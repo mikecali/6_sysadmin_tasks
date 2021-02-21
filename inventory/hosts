@@ -1,7 +1,7 @@
-[JMT]
-jmt01 ansible_ssh_host=172.17.203.21
+[rhel8]
+master ansible_ssh_host=192.168.1.12
+workernode1 ansible_ssh_host=192.168.1.15
 
-[JMT:vars]
-ansible_user=rhel
-ansible_ssh_private_key_file=/home/tejalj/.ssh/rhel_secure
+[rhel8:vars]
+ansible_user=root
 

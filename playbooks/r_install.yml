@@ -2,7 +2,6 @@
 - name: Install additional tools/packages
   hosts: all
   gather_facts: True
-  remote_user: tejalj
   become_user: root
   become: yes
   roles:
