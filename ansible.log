@@ -683,3 +683,335 @@ does not change.
 2021-02-21 19:45:12,063 p=23143 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
 2021-02-21 19:45:12,063 p=23143 u=root n=ansible | master                     : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2021-02-21 19:45:12,063 p=23143 u=root n=ansible | workernode1                : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 20:49:04,751 p=29713 u=root n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 20:49:04,766 p=29713 u=root n=ansible | TASK [install_cron : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 20:49:05,601 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:05,682 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:05,706 p=29713 u=root n=ansible | TASK [install_cron : Check the crontab for root (Before)] **************************************************************************************************************
+2021-02-21 20:49:06,066 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:06,134 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:06,144 p=29713 u=root n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 20:49:06,185 p=29713 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 20:49:06,200 p=29713 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 20:49:06,211 p=29713 u=root n=ansible | TASK [install_cron : Save the crontab output for root before the change] ***********************************************************************************************
+2021-02-21 20:49:07,310 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:07,387 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:07,412 p=29713 u=root n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 20:49:08,048 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:08,076 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:08,103 p=29713 u=root n=ansible | TASK [install_cron : Install a new cron job entry] *********************************************************************************************************************
+2021-02-21 20:49:08,694 p=29713 u=root n=ansible | [WARNING]: The value 0 (type int) in a string field was converted to '0' (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-02-21 20:49:08,695 p=29713 u=root n=ansible | ok: [master]
+2021-02-21 20:49:08,738 p=29713 u=root n=ansible | ok: [workernode1]
+2021-02-21 20:49:08,749 p=29713 u=root n=ansible | TASK [install_cron : Check the crontab for root (After)] ***************************************************************************************************************
+2021-02-21 20:49:09,166 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:09,260 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:09,268 p=29713 u=root n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 20:49:09,308 p=29713 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 20:49:09,314 p=29713 u=root n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 20:49:09,323 p=29713 u=root n=ansible | TASK [install_cron : Save the crontab output for root after the change] ************************************************************************************************
+2021-02-21 20:49:10,420 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:10,551 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:10,575 p=29713 u=root n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 20:49:11,201 p=29713 u=root n=ansible | changed: [master]
+2021-02-21 20:49:11,293 p=29713 u=root n=ansible | changed: [workernode1]
+2021-02-21 20:49:11,299 p=29713 u=root n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 20:49:11,300 p=29713 u=root n=ansible | master                     : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 20:49:11,300 p=29713 u=root n=ansible | workernode1                : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:05:06,745 p=31470 u=root n=ansible | master | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-02-21 21:05:06,755 p=31470 u=root n=ansible | workernode1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-02-21 21:05:14,020 p=31479 u=root n=ansible | master | CHANGED | rc=0 >>
+
+
+2021-02-21 21:05:14,033 p=31479 u=root n=ansible | workernode1 | CHANGED | rc=0 >>
+
+
+2021-02-21 21:08:11,918 p=31970 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hostname
+
+2021-02-21 21:08:11,918 p=31970 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2021-02-21 21:08:30,538 p=31987 u=root n=ansible | master | CHANGED => {
+    "changed": true,
+    "comment": "",
+    "create_home": true,
+    "group": 1005,
+    "groups": "wheel",
+    "home": "/home/ansible",
+    "name": "ansible",
+    "shell": "/bin/bash",
+    "state": "present",
+    "system": false,
+    "uid": 1005
+}
+2021-02-21 21:11:13,606 p=32229 u=root n=ansible | [WARNING]: Unable to parse /home/mcalizo/6_sysadmin_tasks/hosts as an inventory source
+
+2021-02-21 21:11:13,607 p=32229 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-02-21 21:11:13,612 p=32229 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-02-21 21:11:13,614 p=32229 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: master
+
+2021-02-21 21:11:36,070 p=32259 u=root n=ansible | master | FAILED! => {
+    "changed": false,
+    "msg": "invalid key specified: ~/.ssh/id_rsa.pub"
+}
+2021-02-21 21:12:15,777 p=32329 u=root n=ansible | master | FAILED! => {
+    "changed": false,
+    "msg": "invalid key specified: /root/.ssh/id_rsa.pub"
+}
+2021-02-21 21:13:19,289 p=32421 u=root n=ansible | [WARNING]: Unable to parse /home/mcalizo/6_sysadmin_tasks/hinventory/hosts as an inventory source
+
+2021-02-21 21:13:19,290 p=32421 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-02-21 21:13:19,298 p=32421 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-02-21 21:13:19,300 p=32421 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: master
+
+2021-02-21 21:13:47,926 p=32450 u=root n=ansible | master | CHANGED => {
+    "backup": "",
+    "changed": true,
+    "msg": "line replaced"
+}
+2021-02-21 21:17:29,859 p=33399 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 21:17:29,868 p=33399 u=mcalizo n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 21:17:30,045 p=33399 u=mcalizo n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 21:17:30,052 p=33399 u=mcalizo n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 21:17:30,055 p=33399 u=mcalizo n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 21:17:30,055 p=33399 u=mcalizo n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:17:30,056 p=33399 u=mcalizo n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:18:08,645 p=33571 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 21:18:08,653 p=33571 u=mcalizo n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 21:18:08,834 p=33571 u=mcalizo n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ansible@192.168.1.12: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 21:18:08,840 p=33571 u=mcalizo n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ansible@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2021-02-21 21:18:08,841 p=33571 u=mcalizo n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 21:18:08,841 p=33571 u=mcalizo n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:18:08,841 p=33571 u=mcalizo n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:18:20,969 p=33632 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 21:18:20,977 p=33632 u=mcalizo n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 21:18:23,539 p=33632 u=mcalizo n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:18:24,464 p=33632 u=mcalizo n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:18:24,465 p=33632 u=mcalizo n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 21:18:24,465 p=33632 u=mcalizo n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:18:24,465 p=33632 u=mcalizo n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:19:40,926 p=33959 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 21:19:40,934 p=33959 u=mcalizo n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 21:19:43,495 p=33959 u=mcalizo n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:19:44,459 p=33959 u=mcalizo n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:19:44,462 p=33959 u=mcalizo n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 21:19:44,463 p=33959 u=mcalizo n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:19:44,463 p=33959 u=mcalizo n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:19:56,878 p=34030 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 21:19:56,885 p=34030 u=mcalizo n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 21:19:59,437 p=34030 u=mcalizo n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:20:00,378 p=34030 u=mcalizo n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:20:00,380 p=34030 u=mcalizo n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 21:20:00,381 p=34030 u=mcalizo n=ansible | master                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:20:00,381 p=34030 u=mcalizo n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:21:05,171 p=34263 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***************************************************************************************************************************
+2021-02-21 21:21:05,178 p=34263 u=mcalizo n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2021-02-21 21:21:06,766 p=34263 u=mcalizo n=ansible | ok: [master]
+2021-02-21 21:21:08,816 p=34263 u=mcalizo n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:21:08,839 p=34263 u=mcalizo n=ansible | TASK [install_cron : Capture timestamp] ********************************************************************************************************************************
+2021-02-21 21:21:09,398 p=34263 u=mcalizo n=ansible | changed: [master]
+2021-02-21 21:21:09,414 p=34263 u=mcalizo n=ansible | TASK [install_cron : Check the crontab for root (Before)] **************************************************************************************************************
+2021-02-21 21:21:09,894 p=34263 u=mcalizo n=ansible | changed: [master]
+2021-02-21 21:21:09,919 p=34263 u=mcalizo n=ansible | TASK [install_cron : Logs Output] **************************************************************************************************************************************
+2021-02-21 21:21:09,963 p=34263 u=mcalizo n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 21:21:09,969 p=34263 u=mcalizo n=ansible | TASK [install_cron : Save the crontab output for root before the change] ***********************************************************************************************
+2021-02-21 21:21:11,131 p=34263 u=mcalizo n=ansible | changed: [master]
+2021-02-21 21:21:11,149 p=34263 u=mcalizo n=ansible | TASK [install_cron : Fetch the output file] ****************************************************************************************************************************
+2021-02-21 21:21:11,715 p=34263 u=mcalizo n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Failed to fetch the file: [Errno 13] Permission denied: b'/var/tmp/cron-before-master-20210221032109.txt'"}
+2021-02-21 21:21:11,717 p=34263 u=mcalizo n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2021-02-21 21:21:11,718 p=34263 u=mcalizo n=ansible | master                     : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:21:11,718 p=34263 u=mcalizo n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:21:49,282 p=34448 u=mcalizo n=ansible | master | SUCCESS => {
+    "append": true,
+    "changed": false,
+    "comment": "",
+    "group": 1005,
+    "groups": "wheel",
+    "home": "/home/ansible",
+    "move_home": false,
+    "name": "ansible",
+    "shell": "/bin/bash",
+    "state": "present",
+    "uid": 1005
+}
+2021-02-21 21:21:52,229 p=34448 u=mcalizo n=ansible | workernode1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-02-21 21:22:39,874 p=34807 u=root n=ansible | PLAY [Install additional cron jobs for root] ***********************************
+2021-02-21 21:22:39,888 p=34807 u=root n=ansible | TASK [install_cron : Capture timestamp] ****************************************
+2021-02-21 21:22:40,444 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:43,375 p=34807 u=root n=ansible | fatal: [workernode1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-02-21 21:22:43,405 p=34807 u=root n=ansible | TASK [install_cron : Check the crontab for root (Before)] **********************
+2021-02-21 21:22:43,851 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:43,866 p=34807 u=root n=ansible | TASK [install_cron : Logs Output] **********************************************
+2021-02-21 21:22:43,902 p=34807 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 21:22:43,910 p=34807 u=root n=ansible | TASK [install_cron : Save the crontab output for root before the change] *******
+2021-02-21 21:22:45,399 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:45,428 p=34807 u=root n=ansible | TASK [install_cron : Fetch the output file] ************************************
+2021-02-21 21:22:45,972 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:45,986 p=34807 u=root n=ansible | TASK [install_cron : Install a new cron job entry] *****************************
+2021-02-21 21:22:46,571 p=34807 u=root n=ansible | [WARNING]: The value 0 (type int) in a string field was converted to '0' (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2021-02-21 21:22:46,571 p=34807 u=root n=ansible | ok: [master]
+2021-02-21 21:22:46,591 p=34807 u=root n=ansible | TASK [install_cron : Check the crontab for root (After)] ***********************
+2021-02-21 21:22:47,079 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:47,097 p=34807 u=root n=ansible | TASK [install_cron : Logs Output] **********************************************
+2021-02-21 21:22:47,142 p=34807 u=root n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 21:22:47,149 p=34807 u=root n=ansible | TASK [install_cron : Save the crontab output for root after the change] ********
+2021-02-21 21:22:48,152 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:48,165 p=34807 u=root n=ansible | TASK [install_cron : Fetch the output file] ************************************
+2021-02-21 21:22:48,708 p=34807 u=root n=ansible | changed: [master]
+2021-02-21 21:22:48,711 p=34807 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-02-21 21:22:48,712 p=34807 u=root n=ansible | master                     : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:22:48,712 p=34807 u=root n=ansible | workernode1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:23:04,559 p=34986 u=root n=ansible | workernode1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ansible@192.168.1.15: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2021-02-21 21:23:05,107 p=34986 u=root n=ansible | master | SUCCESS => {
+    "append": true,
+    "changed": false,
+    "comment": "",
+    "group": 1005,
+    "groups": "wheel",
+    "home": "/home/ansible",
+    "move_home": false,
+    "name": "ansible",
+    "shell": "/bin/bash",
+    "state": "present",
+    "uid": 1005
+}
+2021-02-21 21:23:59,117 p=35050 u=root n=ansible | workernode1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-02-21 21:24:13,446 p=35083 u=root n=ansible | workernode1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-02-21 21:24:37,888 p=35154 u=root n=ansible | workernode1 | CHANGED => {
+    "changed": true,
+    "comment": "",
+    "create_home": true,
+    "group": 1002,
+    "groups": "wheel",
+    "home": "/home/ansible",
+    "name": "ansible",
+    "shell": "/bin/bash",
+    "state": "present",
+    "system": false,
+    "uid": 1002
+}
+2021-02-21 21:24:52,087 p=35189 u=root n=ansible | [WARNING]: Unable to parse /home/mcalizo/6_sysadmin_tasks/hinventory/hosts as
+an inventory source
+
+2021-02-21 21:24:52,088 p=35189 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-02-21 21:24:52,094 p=35189 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-02-21 21:25:05,339 p=35216 u=root n=ansible | master | SUCCESS => {
+    "backup": "",
+    "changed": false,
+    "msg": ""
+}
+2021-02-21 21:25:05,341 p=35216 u=root n=ansible | workernode1 | CHANGED => {
+    "backup": "",
+    "changed": true,
+    "msg": "line replaced"
+}
+2021-02-21 21:25:18,597 p=35300 u=mcalizo n=ansible | PLAY [Install additional cron jobs for root] ***********************************
+2021-02-21 21:25:18,605 p=35300 u=mcalizo n=ansible | TASK [Gathering Facts] *********************************************************
+2021-02-21 21:25:21,844 p=35300 u=mcalizo n=ansible | ok: [workernode1]
+2021-02-21 21:25:21,858 p=35300 u=mcalizo n=ansible | TASK [install_cron : Capture timestamp] ****************************************
+2021-02-21 21:25:23,698 p=35300 u=mcalizo n=ansible | changed: [master]
+2021-02-21 21:25:23,793 p=35300 u=mcalizo n=ansible | changed: [workernode1]
+2021-02-21 21:25:23,828 p=35300 u=mcalizo n=ansible | TASK [install_cron : Check the crontab for root (Before)] **********************
+2021-02-21 21:25:25,462 p=35300 u=mcalizo n=ansible | changed: [master]
+2021-02-21 21:25:25,617 p=35300 u=mcalizo n=ansible | changed: [workernode1]
+2021-02-21 21:25:25,642 p=35300 u=mcalizo n=ansible | TASK [install_cron : Logs Output] **********************************************
+2021-02-21 21:25:25,682 p=35300 u=mcalizo n=ansible | ok: [master] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 21:25:25,690 p=35300 u=mcalizo n=ansible | ok: [workernode1] => {
+    "msg": [
+        "1 2 3 4 5 /usr/bin/ls /tmp",
+        "#Ansible: Iotop Monitoring",
+        "0 5,2 * * * /usr/sbin/iotop -b -n 1 >> /var/tmp/iotop.log 2>> /var/tmp/iotop.err"
+    ]
+}
+2021-02-21 21:25:25,698 p=35300 u=mcalizo n=ansible | TASK [install_cron : Save the crontab output for root before the change] *******
+2021-02-21 21:25:29,335 p=35300 u=mcalizo n=ansible | changed: [master]
+2021-02-21 21:25:29,421 p=35300 u=mcalizo n=ansible | changed: [workernode1]
+2021-02-21 21:25:29,450 p=35300 u=mcalizo n=ansible | TASK [install_cron : Fetch the output file] ************************************
+2021-02-21 21:25:31,342 p=35300 u=mcalizo n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Failed to fetch the file: [Errno 13] Permission denied: b'/var/tmp/cron-before-master-20210221032523.txt'"}
+2021-02-21 21:25:31,451 p=35300 u=mcalizo n=ansible | fatal: [workernode1]: FAILED! => {"changed": false, "msg": "Failed to fetch the file: [Errno 13] Permission denied: b'/var/tmp/cron-before-workernode1-20210221212631.txt'"}
+2021-02-21 21:25:31,455 p=35300 u=mcalizo n=ansible | PLAY RECAP *********************************************************************
+2021-02-21 21:25:31,455 p=35300 u=mcalizo n=ansible | master                     : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-21 21:25:31,456 p=35300 u=mcalizo n=ansible | workernode1                : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   

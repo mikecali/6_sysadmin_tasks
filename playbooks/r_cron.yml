@@ -2,7 +2,7 @@
 - name: Install additional cron jobs for root
   hosts: all
   gather_facts: True
-  remote_user: root
+  remote_user: ansible
   become_user: root
   become: yes
   roles:
