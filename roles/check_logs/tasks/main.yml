@@ -7,8 +7,7 @@
 
 - name: Check the logs
   shell: grep "`date --date="today" +%b\ %e`" {{ log_file }}
-  sudo: yes
-  sudo_user: root
+  become: yes
   register: log_messages
   ignore_errors: true
 

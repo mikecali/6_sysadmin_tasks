@@ -1,6 +1,6 @@
 - name: Check Stats/sar for Servers
   hosts: all
   gather_facts: True
-  sudo: yes
+  become: yes
   roles:
     - check_stats

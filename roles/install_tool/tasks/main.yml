@@ -2,7 +2,8 @@
 # tasks file for install_tool
 
 - name: Install specified tools in the role vars
-  yum: 
-    name={{ item.pkg }}
-    state={{ item.act }}
+  dnf: 
+    name: '{{ package_list }}'
+    state: present
+    update_cache: true
   with_items: "{{ package_list }}" 

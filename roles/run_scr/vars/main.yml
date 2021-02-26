@@ -1,6 +1,6 @@
 ---
 # vars file for run_scr
 
-my_scr: /home/mcalizo/myscript.sh
+my_scr: ../myscript.sh
 dump_dir: /var/tmp
 
