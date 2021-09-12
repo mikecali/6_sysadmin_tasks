@@ -3,4 +3,4 @@
   hosts: all
   roles:
    - check_uptime
-
+   - check_stats
