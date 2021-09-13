@@ -1,5 +1,5 @@
 ---
-- name: check if memory is between 7000 and 8000MB
+- name: check if memory is between 1000 and 3000MB
   assert:
     that:
       - ansible_memtotal_mb | int >= 3000
