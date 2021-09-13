@@ -1,0 +1,13 @@
+---
+# tasks file for dns_config_verify
+- name: grep
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+  - name: grep for nameserver
+    shell: grep 'nameserver 192.168.1.1' /etc/resolv.conf
+    register: result
+    changed_when: result.rc != 0
+    failed_when: False
