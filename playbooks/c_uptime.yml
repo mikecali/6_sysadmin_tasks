@@ -1,5 +1,4 @@
 ---
-- name: Check Uptime for Servers GitOps Test
   hosts: all
   roles:
    - check_uptime
