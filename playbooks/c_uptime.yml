@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 - name: Check Uptime for Servers GitOps-test1
+=======
+- name: Check Uptime for Servers GitOps Test
+>>>>>>> main
   hosts: all
   roles:
    - check_uptime
