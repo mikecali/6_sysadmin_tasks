@@ -4,3 +4,4 @@
   become: yes
   roles:
     - check_stats
+    - check_uptime
