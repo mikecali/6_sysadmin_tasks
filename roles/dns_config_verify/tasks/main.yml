@@ -4,3 +4,12 @@
   register: result
   changed_when: result.rc != 0
   failed_when: False
+
+- name: Invoke play to Use the correct DNS
+  copy: 
+    src: resolv.conf
+    dest: /etc/resolv.conf
+    group: root
+    owner: root
+    mode: '0644'
+  when: result.rc != 0
