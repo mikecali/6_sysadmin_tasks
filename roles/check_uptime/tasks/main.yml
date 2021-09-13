@@ -12,6 +12,9 @@
 - name: Output Uptime
   debug: msg={{ uptime.stdout_lines }}
 
+- name: debug - output
+  debug: msg: "gitops-update"
+
 - name: Create dump directory
   file: path={{ dump_dir }} state=directory mode=0755
 
