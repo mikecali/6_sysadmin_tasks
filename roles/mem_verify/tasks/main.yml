@@ -1,18 +1,12 @@
 ---
-# tasks file for mem_verify
-- name: assert
-  hosts: all
-
-  tasks:
-
-  - name: check if memory is between 7000 and 8000MB
-    assert:
-      that:
-        - ansible_memtotal_mb | int >= 7000
-        - ansible_memtotal_mb | int <= 8000
-      fail_msg: "Memory is {{ ansible_memtotal_mb }}MB not 1024MB"
-    register: result
-    changed_when:
-      - result.evaluated_to is defined
-      - result.evaluated_to == False
-    failed_when: False
+- name: check if memory is between 7000 and 8000MB
+  assert:
+    that:
+      - ansible_memtotal_mb | int >= 7000
+      - ansible_memtotal_mb | int <= 8000
+    fail_msg: "Memory is {{ ansible_memtotal_mb }}MB not 1024MB"
+  register: result
+  changed_when:
+    - result.evaluated_to is defined
+    - result.evaluated_to == False
+  failed_when: False
