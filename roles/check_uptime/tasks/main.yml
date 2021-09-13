@@ -14,7 +14,7 @@
 
 - name: debug - output
   debug: 
-    msg: "gitops-update announce -1x1"
+    msg: "gitops-update announce 1x1"
 
 - name: Create dump directory
   file: path={{ dump_dir }} state=directory mode=0755
