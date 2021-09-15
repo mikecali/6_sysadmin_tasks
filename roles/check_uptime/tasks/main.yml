@@ -1,5 +1,5 @@
 ---
-# tasks file for check_uptime
+## tasks file for check_uptime
 
 - name: Capture timestamp
   shell: date +"%Y%m%d%H%M%S"
