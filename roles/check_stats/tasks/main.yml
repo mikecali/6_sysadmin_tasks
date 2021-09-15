@@ -1,5 +1,5 @@
 ---
-# tasks file for check_stats
+## tasks file for check_stats
 
 - name: Get current date time
   shell: date +"%Y%m%d%H%M%S"

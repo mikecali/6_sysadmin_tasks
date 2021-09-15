@@ -1,4 +1,4 @@
-- name: Run Script to Servers
+- name: Run Script to Servers GitOps Test
   hosts: all
   gather_facts: True
   become: yes
